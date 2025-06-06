@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>baby where r u( ˘ ³˘)♥</title>
+  <style>
+    .funny-photo {
+      width: 300px;
+      border: 8px dashed hotpink;
+      border-radius: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 20px orange;
+      filter: contrast(120%) saturate(150%);
+      transition: transform 0.4s ease;
+    }
+
+    .funny-photo:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    .exaggerated-rotate {
+      width: 300px;
+      border: 10px double gold;
+      border-radius: 50%;
+      box-shadow: 0 0 30px red, 0 0 60px magenta, 0 0 90px yellow;
+      animation: spin 5s linear infinite, bling 1s infinite alternate;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes bling {
+      0%   { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    /* 浮誇大顆按鈕動畫 */
+    @keyframes floaty {
+      0% { transform: translateX(20px) translateY(0); }
+      50% { transform: translateX(20px) translateY(-10px); }
+      100% { transform: translateX(20px) translateY(0); }
+    }
+
+    @keyframes glowing {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body bgcolor="#FFD9EC">
+  <center><h1><font color="613030">Welcome!</font></h1></center>
+  <marquee direction="right">哇哇哇哇(๑❛ᴗ❛๑)</marquee>
+
+  <br><br>
+  <marquee scrollamount="100">可以帶我去吃酸菜魚嗎</marquee>
+  <h1>喵喵</h1>
+
+  <!-- ✅ 圖片 + 按鈕一起包起來 -->
+  <div style="position: relative; display: inline-block;">
+    <img src="pic/S__80510993_0.jpg" alt="搞笑嘉進" class="funny-photo">
+
+    <!-- ✅ 浮誇大顆按鈕 -->
+    <button onclick="alert('你放屁好臭！💨')"
+      style="
+        position: absolute;
+        top: 30%;
+        left: 100%;
+        transform: translateX(20px);
+        font-size: 28px;
+        padding: 20px 40px;
+        background: linear-gradient(45deg, #ff66cc, #ffcc66, #66ffcc);
+        background-size: 300% 300%;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 0 30px #ff66cc, 0 0 60px #ffcc66;
+        animation: floaty 2s ease-in-out infinite, glowing 5s linear infinite;
+        cursor: pointer;
+      ">
+      點我爆氣 💥
+    </button>
+<!-- 超浮誇圖片在按鈕旁邊 -->
+<img src="pic/S__80510994_0.jpg" alt="浮誇炸裂"
+  style="
+    width: 180px;
+    border-radius: 20px;
+    border: 5px solid lime;
+    position: absolute;
+    top: 0;
+    left: 160%;
+    transform: rotate(0deg);
+    animation: spin 4s linear infinite, bling 1s infinite alternate;
+    box-shadow: 0 0 40px lime, 0 0 80px yellow;
+  ">
+  </div>
+
+  <br><br>
+
+  <!-- ✅ 第二張圖片 -->
+  <img src="pic/S__80510990_0.jpg" alt="自轉嘉進" class="exaggerated-rotate">
+
+</body>
+</html>
